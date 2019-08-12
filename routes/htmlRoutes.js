@@ -5,9 +5,8 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     db.Cars.findAll({})
     .then(data => {
-      res.render("index", {
-        cars: data,
-      });
+      let carObject = {cars:data}
+      res.render("index", carObject);
     })
     .catch(err => {
       console.log(err)
