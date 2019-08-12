@@ -1,3 +1,4 @@
+
 //Starting with POST request. Sent to htmlroutes which calls create method on sequelize object(table)
 $('#createCar').on('click', () => {
     let vehicleInfo = {
@@ -117,3 +118,4 @@ $('#createCar').on('click', () => {
 // Add event listeners to the submit and delete buttons
 // $submitBtn.on("click", handleFormSubmit);
 // $exampleList.on("click", ".delete", handleDeleteBtnClick);
+

@@ -1,8 +1,23 @@
 var db = require("../models");
 
-module.exports = function(app) {
-  // Load index page
+module.exports = (app) => {
+
+  app.post('/api/vehicles', (req, res) => {
+    db.Cars.create({
+      make: req.body.make,
+      model: req.body.model,
+      year: req.body.year,
+      price: req.body.price
+    }).then(data => {
+      // console.log(data)
+    }).catch(err => {
+      console.log(err)
+    })
+    console.log(req.body)
+  })
+
   app.get("/", function(req, res) {
+
     db.Cars.findAll({})
     .then(data => {
       res.render("index", {
@@ -36,4 +51,5 @@ module.exports = function(app) {
   //     });
   //   });
   // });
+
 };
