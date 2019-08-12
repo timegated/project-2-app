@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "Jabbawocky45",
-    "database": "exampledb",
+    "database": "car_db",
     "host": "localhost",
     "dialect": "mysql"
   },
