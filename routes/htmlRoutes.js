@@ -20,27 +20,26 @@ module.exports = (app) => {
 
     db.Cars.findAll({})
     .then(data => {
-      res.render("index", {
-        cars: data,
-      });
+      let carObject = {cars:data}
+      res.render("index", carObject);
     })
     .catch(err => {
       console.log(err)
     });
   });
-  app.post("/api/cars", (req, res) => {
-    db.Cars.create({
-      make: req.body.make,
-      model: req.body.model,
-      year: req.body.year,
-      price: req.body.price
-    })
-    .then(response => {
-      console.log(response.dataValues)
-    })
-    .catch(err => {
-      console.log(err)
-    })
+  // app.post("/api/cars", (req, res) => {
+  //   db.Cars.create({
+  //     make: req.body.make,
+  //     model: req.body.model,
+  //     year: req.body.year,
+  //     price: req.body.price
+  //   })
+  //   .then(response => {
+  //     console.log(response.dataValues)
+  //   })
+  //   .catch(err => {
+  //     console.log(err)
+  //   })
     // console.log(req.body.datavalues)
   })
   // Load example page and pass in an example by id

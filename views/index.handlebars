@@ -41,6 +41,9 @@
         <ul id="example-list" class="collection">
           {{#each cars}}
           <li data-id="{{this.id}}" class="collection-item">
+<<<<<<< HEAD
+            <a href="{{this.id}}">{{make}}, {{model}}, {{year}}, {{price}}.00</a>
+=======
             <a href="vehicle/{{this.id}}">{{this.vehicle}}</a>
 
 
@@ -94,6 +97,7 @@
             <a href="example/{{this.id}}">{{this.text}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
 
+>>>>>>> 47a2e9f504ff6a7dac2fb7cceff043833fa16f23
           </li>
           {{/each}}
         </ul>
