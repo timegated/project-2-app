@@ -13,16 +13,16 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
-nhtsa.getMakesForManufacturer('Toyota')
-.then(results => {
-  for(let item in results.data) {
-    console.log(results.data[item][1])
-  }
+// nhtsa.getMakesForManufacturer('Toyota')
+// .then(results => {
+//   for(let item in results.data) {
+//     console.log(results.data[item][1])
+//   }
   
-})
-.catch(err => {
-  console.log(err)
-})
+// })
+// .catch(err => {
+//   console.log(err)
+// })
 // Handlebars
 app.engine(
   "handlebars",
@@ -33,7 +33,7 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/apiRoutes")(app);
+// require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };
@@ -45,7 +45,7 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => {
     console.log(`Works! Listening on Port ${PORT}`);
   });

@@ -1,20 +1,21 @@
 //Starting with POST request. Sent to htmlroutes which calls create method on sequelize object(table)
 $('#createCar').on('click', () => {
-  let vehicleInfo = {
-    carMake: $('#make').val(''),
-    carModel: $('#model').val(''),
-    carYear: $('#year').val(''),
-    carPrice: $('#price').val('')
+    let vehicleInfo = {
+    make: $('#make').val(),
+    model: $('#model').val(),
+    year: $('#year').val(),
+    price: $('#price').val()
   }
   console.log(vehicleInfo)
-  $.ajax({
-    headers: {
-      "Content-Type": "application/json"
-    },
-    type: "POST",
-    url:"api/cars",
-    body:JSON.stringify(vehicleInfo)
-  })
+    $.ajax({
+        method: 'POST',
+        data: vehicleInfo,
+        url: '/api/cars'
+    }).then(data => {
+        console.log(data)
+    })
+     
+  
 })
 
 // Get references to page elements

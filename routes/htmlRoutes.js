@@ -4,10 +4,9 @@ module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
     db.Cars.findAll({})
-    .then(response => {
+    .then(data => {
       res.render("index", {
-        cars: response,
-        
+        cars: data,
       });
     })
     .catch(err => {
@@ -22,11 +21,12 @@ module.exports = function(app) {
       price: req.body.price
     })
     .then(response => {
-      // console.log(response)
+      console.log(response.dataValues)
     })
     .catch(err => {
       console.log(err)
     })
+    // console.log(req.body.datavalues)
   })
   // Load example page and pass in an example by id
   // app.get("/example/:id", function(req, res) {
