@@ -1,4 +1,49 @@
 
+<nav>
+  <div class="nav-wrapper blue lighten-3">
+    <h5 class="brand-logo">VROOM</h5>
+    <ul class="right">
+      <li><a href="#">Auctions</a></li>
+      <li><a id="getCar" href="#">Cars</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+            <input type="text" id="make" placeholder="Make">
+            <label style="font-size: 18px;" for="make">Make</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+            <input type="text" id="model" placeholder="Model">
+            <label style="font-size: 18px;" for="model">Model</label>
+        </div>
+      </div>
+       <div class="row">
+          <div class="input-field col s6">
+            <input type="text" id="year" placeholder="year">
+            <label style="font-size: 18px;" for="year">Year</label>
+          </div>
+        </div>
+      <div class="row">
+        <div class="input-field col s6">
+            <input type="text" id="price" placeholder="price">
+            <label style="font-size: 18px;" for="price">Price</label>
+          </div>
+        </div>
+        <button type="submit" id="createCar" class="btn waves waves-effect blue lighten-3">Submit</button>
+    </form>
+</div>
+        
+        <ul id="example-list" class="collection">
+          {{#each cars}}
+          <li data-id="{{this.id}}" class="collection-item">
+            <a href="vehicle/{{this.id}}">{{this.vehicle}}</a>
+
+
   <nav>
     <div class="nav-wrapper blue lighten-3">
       <a href="#" class="brand-logo">Logo</a>
@@ -48,6 +93,7 @@
           <li data-id="{{this.id}}" class="list-group-item">
             <a href="example/{{this.id}}">{{this.text}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
+
           </li>
           {{/each}}
         </ul>

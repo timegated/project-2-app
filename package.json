@@ -11,10 +11,14 @@
   },
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.0",
     "dotenv": "^8.0.0",
     "express": "^4.17.0",
     "express-handlebars": "^3.1.0",
     "mysql2": "^1.6.5",
+
+    "nhtsa": "^1.2.7",
+
     "nodemon": "^1.19.1",
     "sequelize": "^5.8.6"
   },
