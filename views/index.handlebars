@@ -1,3 +1,4 @@
+
 <nav>
   <div class="nav-wrapper blue lighten-3">
     <h5 class="brand-logo">VROOM</h5>
@@ -40,7 +41,63 @@
         <ul id="example-list" class="collection">
           {{#each cars}}
           <li data-id="{{this.id}}" class="collection-item">
+<<<<<<< HEAD
             <a href="{{this.id}}">{{make}}, {{model}}, {{year}}, {{price}}.00</a>
+=======
+            <a href="vehicle/{{this.id}}">{{this.vehicle}}</a>
+
+
+  <nav>
+    <div class="nav-wrapper blue lighten-3">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#">Vehicles</a></li>
+        <li><a href="#">Buy</a></li>
+        <li><a href="#">Sell</a></li>
+      </ul>
+    </div>
+  </nav>
+   <div class="row">
+    <form class="col s12">
+     
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="text" id="make" class="validate">
+          <label for="Make">Make</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="model" type="text" class="validate">
+          <label for="model">Model</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="year" type="text" class="validate">
+          <label for="year">Year</label>
+        </div>
+      </div>
+       <div class="row">
+        <div class="input-field col s12">
+          <input id="price" type="text" class="validate">
+          <label for="price">Price</label>
+        </div>
+      </div>
+      <div class="row">
+        <button type="submit" id="createCar" class="btn waves waves-effect blue lighten-3">Submit</button>
+      </div>
+      
+    </form>
+  </div>
+ 
+        <ul id="example-list" class="list-group">
+          {{#each examples}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="example/{{this.id}}">{{this.text}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+
+>>>>>>> 47a2e9f504ff6a7dac2fb7cceff043833fa16f23
           </li>
           {{/each}}
         </ul>
