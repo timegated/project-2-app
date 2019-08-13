@@ -1,103 +1,39 @@
+{{> nav/nav-block}}
 
-<nav>
-  <div class="nav-wrapper blue lighten-3">
-    <h5 class="brand-logo">VROOM</h5>
-    <ul class="right">
-      <li><a href="#">Auctions</a></li>
-      <li><a id="getCar" href="#">Cars</a></li>
-    </ul>
-  </div>
-</nav>
-<div class="row">
-    <form class="col s12">
+  <div class="row">
+    <form class="col s6">
+    
       <div class="row">
-        <div class="input-field col s6">
-            <input type="text" id="make" placeholder="Make">
-            <label style="font-size: 18px;" for="make">Make</label>
+        <div class="input-field inline">
+          <input id="make" type="text">
+          <label for="make" class="blue-text darken-3">Make</label>
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s6">
-            <input type="text" id="model" placeholder="Model">
-            <label style="font-size: 18px;" for="model">Model</label>
+        <div class="input-field inline">
+          <input id="model" type="text">
+          <label for="password" class="blue-text darken-3">Model</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field inline">
+          <input id="year" type="text">
+          <label for="year" class="blue-text darken-3">Year</label>
         </div>
       </div>
        <div class="row">
-          <div class="input-field col s6">
-            <input type="text" id="year" placeholder="year">
-            <label style="font-size: 18px;" for="year">Year</label>
-          </div>
+        <div class="input-field inline">
+          <input id="image" type="text">
+          <label for="image" class="blue-text darken-3">Image</label>
         </div>
+      </div>
       <div class="row">
-        <div class="input-field col s6">
-            <input type="text" id="price" placeholder="price">
-            <label style="font-size: 18px;" for="price">Price</label>
+       <div class="input-field inline">
+            <input id="price" type="text" class="validate">
+            <label for="price" class="blue-text darken-3">Price</label>
           </div>
         </div>
-        <button type="submit" id="createCar" class="btn waves waves-effect blue lighten-3">Submit</button>
+        <button class="btn btn-floating" id="createCar"><i class="material-icons pulse blue darken-3">add</i></button>
     </form>
+    
 </div>
-        
-        <ul id="example-list" class="collection">
-          {{#each cars}}
-          <li data-id="{{this.id}}" class="collection-item">
-            <a href="vehicle/{{this.id}}">{{this.vehicle}}</a>
-
-
-  <nav>
-    <div class="nav-wrapper blue lighten-3">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#">Vehicles</a></li>
-        <li><a href="#">Buy</a></li>
-        <li><a href="#">Sell</a></li>
-      </ul>
-    </div>
-  </nav>
-   <div class="row">
-    <form class="col s12">
-     
-      <div class="row">
-        <div class="input-field col s12">
-          <input type="text" id="make" class="validate">
-          <label for="Make">Make</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="model" type="text" class="validate">
-          <label for="model">Model</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="year" type="text" class="validate">
-          <label for="year">Year</label>
-        </div>
-      </div>
-       <div class="row">
-        <div class="input-field col s12">
-          <input id="price" type="text" class="validate">
-          <label for="price">Price</label>
-        </div>
-      </div>
-      <div class="row">
-        <button type="submit" id="createCar" class="btn waves waves-effect blue lighten-3">Submit</button>
-      </div>
-      
-    </form>
-  </div>
- 
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-
-          </li>
-          {{/each}}
-        </ul>
-      
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
