@@ -1,13 +1,4 @@
-<nav>
-    <div class="nav-wrapper blue darken-3">
-      <a href="#" class="brand-logo">VROOM</a>
-      <ul id="nav-mobile" class="right">
-        <li><a href="#">Vehicles</a></li>
-        <li><a href="#">Sell</a></li>
-        <li><a href="#">WIP</a></li>
-      </ul>
-    </div>
-  </nav>
+{{> nav/nav-block}}
 
   <div class="row">
     <form class="col s6">
@@ -21,13 +12,19 @@
       <div class="row">
         <div class="input-field inline">
           <input id="model" type="text">
-          <label for="password" class="blue-text darken-3">Password</label>
+          <label for="password" class="blue-text darken-3">Model</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field inline">
           <input id="year" type="text">
           <label for="year" class="blue-text darken-3">Year</label>
+        </div>
+      </div>
+       <div class="row">
+        <div class="input-field inline">
+          <input id="image" type="text">
+          <label for="image" class="blue-text darken-3">Image</label>
         </div>
       </div>
       <div class="row">
@@ -38,16 +35,5 @@
         </div>
         <button class="btn btn-floating" id="createCar"><i class="material-icons pulse blue darken-3">add</i></button>
     </form>
-  
-  <div class="col s6">
-   <ul id="vehicle-list" class="collection">
-          {{#each cars}}
-          <li data-id="{{this.id}}" class="collection-item">
-
-            <a href="{{this.id}}">{{make}}, {{model}}, {{year}}, {{price}}</a>
-
-          </li>
-          {{/each}}
-        </ul>
-        </div>
-    </div>
+    
+</div>

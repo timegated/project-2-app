@@ -13,6 +13,7 @@ $(document).ready(() => {
             url: '/api/cars'
         }).then(data => {
             console.log(data)
+            location.reload()
         })
     })
 })
