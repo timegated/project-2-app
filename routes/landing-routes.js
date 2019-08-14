@@ -9,7 +9,7 @@ const models = require('car-models')
 module.exports = (app) => {
   app.get('/', (req, res) => {
    
-      res.render('index')
+      res.render('models')
    
     })
     app.get('/models', (req, res) => {
