@@ -5,8 +5,12 @@ module.exports = (sequelize, DataTypes) => {
         },
         password: {
             type: DataTypes.STRING
-        }
-       
+        },
     })
+    Users.associate = function(models) {
+        Users.hasMany(models.Cars, {
+            onDelete: 'CASCADE'
+        })
+    }
     return Users
 }

@@ -2,3 +2,8 @@ body {
   background:lightgray;
 }
 
+.card{
+  position: fixed;
+  top: 50%;
+  left: 15%;
+}
