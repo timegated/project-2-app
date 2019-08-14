@@ -4,9 +4,11 @@
           {{#each cars}}
           <li data-id="{{this.id}}" class="collection-item">
 
-            <a href="{{this.id}}">{{make}}, {{model}}, {{year}}, {{price}}</a>
+            <a href="{{this.id}}">{{make}}, {{model}}, {{year}}, {{price}}, {{mileage}}, {{status}} </a>
 
           </li>
           {{/each}}
         </ul>
 </div>
+
+{{!-- add button --}}
