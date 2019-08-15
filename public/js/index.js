@@ -25,7 +25,7 @@ $('#createCar').on('click', () => {
   })
   // Storing user information in db with ajax call to signup route
   $('#signup').on('click', () => {
-    let userInfo = {
+    const userInfo = {
       username: $('#username').val(),
       password: $('#password').val()
     }
@@ -53,6 +53,7 @@ $('.update').on('click', (e) => {
     }).then(data => {
       console.log(data)
     })
+    location.reload()
   })
   //  Delete method for vehicles page
 $('.delete').on('click', (e) => {
@@ -63,9 +64,10 @@ $('.delete').on('click', (e) => {
       url: '/models/' + id
     }).then((data) => {
     // console.log(data)
-      location.reload()
+     
     }).catch((err) => {
       console.log(err)
     })
+    location.reload()
   })
 })
