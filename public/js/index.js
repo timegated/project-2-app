@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    //Posting new cars to cars_db
+  // Posting new cars to cars_db
 
 $('#createCar').on('click', () => {
     // console.log('createCar is clicked')
@@ -30,7 +30,7 @@ $('#createCar').on('click', () => {
       password: $('#password').val()
     }
     $.ajax({
-      method:'POST',
+      method: 'POST',
       data: userInfo,
       url: '/signup'
     })
@@ -64,7 +64,6 @@ $('.delete').on('click', (e) => {
       url: '/models/' + id
     }).then((data) => {
     // console.log(data)
-     
     }).catch((err) => {
       console.log(err)
     })

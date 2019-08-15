@@ -7,15 +7,11 @@ module.exports = (app) => {
 
   // Home page - Currently for adding cars
   app.get('/', (req, res) => {
-
     res.render('landing')
   })
-
-   
-
   app.get('/addcar', (req, res) => {
     res.render('addcar')
-  });
+  })
   // Delete vehicles from inventory
   app.put('/models/:id', (req, res) => {
     db.Cars.update({
@@ -35,11 +31,10 @@ module.exports = (app) => {
         id: req.params.id
       }
 
-    });
-  });
+    })
+  })
   // Displaying all cars added to the database
   app.get('/models', (req, res) => {
-    console.log("get models");
     db.Cars.findAll({})
       .then(data => {
         const carObject = { cars: data }
@@ -66,5 +61,4 @@ module.exports = (app) => {
     })
     // console.log(req.body)
   })
-
 }
