@@ -21,7 +21,9 @@ module.exports = (app) => {
     db.Cars.update({
       status: true
     }, {
-      where: req.body.id
+      where: {
+        id: req.body.id
+      }
     }).then(data => {
       console.log(data)
     })
