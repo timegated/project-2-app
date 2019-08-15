@@ -7,6 +7,12 @@ module.exports = (app) => {
 
     //Home page - Currently for adding cars
   app.get('/', (req, res) => {
+<<<<<<< HEAD
+   
+      res.render('index')
+   
+    })
+=======
       res.render('landing')
 
   });
@@ -23,6 +29,7 @@ module.exports = (app) => {
       console.log(req.id)
     });
     //Displaying all cars added to the database
+>>>>>>> c810dafa0318f78499cf8f0e72b98be473a4e18b
     app.get('/models', (req, res) => {
       db.Cars.findAll({})
       .then(data => {

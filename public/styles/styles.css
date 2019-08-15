@@ -18,6 +18,11 @@ h6 {
   font-size: 50px;
 }
 
+h2 {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
 .brand-logo {
  font-family: 'Faster One', cursive;
  color: #D6BA73;
@@ -33,3 +38,13 @@ h6 {
   color: #D6BA73;
 }
 
+<<<<<<< HEAD
+.centered {
+  padding-top: 115px;
+}
+
+.login{
+  padding-top: 85px;
+}
+=======
+>>>>>>> c810dafa0318f78499cf8f0e72b98be473a4e18b
