@@ -10,7 +10,10 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.inventory {
+  background: lightgrey;
+  
+}
 h1 {
   font-family: 'Faster One', cursive;
   color: #D6BA73;
