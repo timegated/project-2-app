@@ -25,12 +25,6 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.BOOLEAN,
         }
     })
-    Cars.associate = function(models) {
-        Cars.belongsTo(models.Users, {
-            foreignKey: {
-                allowNull:false
-            }
-        })
-    }
+ 
     return Cars
 }

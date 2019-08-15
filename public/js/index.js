@@ -9,6 +9,7 @@ $(document).ready(() => {
             year: $('#year').val(),
             image: $('#image').val(),
             price: $('#price').val(),
+            mileage: $('#mileage').val(),
             description: $('#description').val()
         }
         $.ajax({
@@ -23,7 +24,7 @@ $(document).ready(() => {
         })
     })
     //Storing user information in db with ajax call to signup route
-   $('#signup').on('click', () => {
+    $('#signup').on('click', () => {
        let userInfo = {
            username: $('#username').val(),
            password: $('#password').val()
@@ -42,9 +43,14 @@ $(document).ready(() => {
     // console.log('update was clicked.')
         let id = e.currentTarget.getAttribute('data-id')
         let status = e.currentTarget.getAttribute('data-status')
+        console.log(id)
+        console.log(status)
        $.ajax({
            method: 'PUT',
-           url: '/models/'
+           url: '/models/' + id
+       }).then(data => {
+           
+           console.log(data)
        })
 
    })
@@ -63,7 +69,5 @@ $(document).ready(() => {
             console.log(err)
         })
     })
-    
-    
 })
 

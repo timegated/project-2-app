@@ -1,5 +1,6 @@
+{{> nav/nav-block}}
 <div class="row">
-  <h1>Newly Added Vehicles</h1>
+ <h6>Inventory</h6>
   {{#each cars}}
   <div class="col s3 m4">
     <div class="card">
@@ -14,12 +15,14 @@
         <p>Year: {{year}}</p>
         <p>Price: {{price}}</p>
         <p>Description: {{description}}</p>
+        <p>Mileage: {{mileage}}</p>
         <p>Ready for sale: {{status}}</p>
        
       </div>
     </div>
  </div>
  {{/each}}
+
 
 
 

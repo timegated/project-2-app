@@ -4,18 +4,22 @@ const db = require('../models')
 //Need delete and update.
 
 module.exports = (app) => {
+
     //Home page - Currently for adding cars
-    app.get('/', (req, res) => {
-      res.render('index')
-   
+  app.get('/', (req, res) => {
+      res.render('landing')
+
+  });
+  app.get('/addcar', (req, res) => {
+      res.render('addcar')
     });
     //Delete vehicles from inventory
-    app.delete('/models/:id', (req, res) => {
+  app.delete('/models/:id', (req, res) => {
       db.Cars.destroy({
         where: {
           id: req.params.id
         }
-      });
+    });
       console.log(req.id)
     });
     //Displaying all cars added to the database
@@ -38,6 +42,7 @@ module.exports = (app) => {
       year: req.body.year,
       image: req.body.image,
       price: req.body.price,
+      mileage: req.body.mileage,
       description: req.body.description,
       status: false
     }).then(data => {
