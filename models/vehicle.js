@@ -9,9 +9,22 @@ module.exports = (sequelize, DataTypes) => {
         year: {
             type: DataTypes.INTEGER
         },
+        image: {
+            type: DataTypes.TEXT
+        },
         price: {
             type: DataTypes.DOUBLE
+        },
+        description: {
+            type: DataTypes.STRING
+        },
+        mileage: {
+            type: DataTypes.INTEGER
+        },
+        status: {
+            type: DataTypes.BOOLEAN,
         }
     })
+ 
     return Cars
 }
