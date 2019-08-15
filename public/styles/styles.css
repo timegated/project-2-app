@@ -33,17 +33,13 @@ h6{
 
 .brand-logo {
  font-family: 'Faster One', cursive;
- color: #D6BA73;
  text-align:center;
-}
-
-.navbar {
-  background-color: #172239; 
-  background-image: linear-gradient(90deg, #172239, #152852); 
+ margin-left: 25px;
+ font-size: 60px;
 }
 
 .links {
-  color: #D6BA73;
+  color: #d50000;
 }
 
 .centered {
@@ -57,3 +53,8 @@ h6{
 .signup{
   padding-top: 5px;
 }
+
+.addcar{
+  padding-top: 30px;
+}
+
