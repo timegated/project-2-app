@@ -23,7 +23,6 @@
     "nhtsa": "^1.2.7",
     "node-craigslist": "^2.1.0",
     "nodemon": "^1.19.1",
-    "passport": "^0.4.0",
     "sequelize": "^5.8.6",
     "vin-generator": "^1.0.1"
   },
