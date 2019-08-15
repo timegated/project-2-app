@@ -18,6 +18,11 @@ h6 {
   font-size: 50px;
 }
 
+h2 {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
 .brand-logo {
  font-family: 'Faster One', cursive;
  color: #D6BA73;

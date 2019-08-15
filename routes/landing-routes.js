@@ -7,8 +7,12 @@ module.exports = (app) => {
 
   // Home page - Currently for adding cars
   app.get('/', (req, res) => {
+
     res.render('landing')
   })
+
+   
+
   app.get('/addcar', (req, res) => {
     res.render('addcar')
   });
@@ -24,13 +28,13 @@ module.exports = (app) => {
     })
   })
   app.delete('/models/:id', (req, res) => {
+
     db.Cars.destroy({
       where: {
         id: req.params.id
       }
-    })
-    console.log(req.id)
-  })
+
+    });
   // Displaying all cars added to the database
   app.get('/models', (req, res) => {
     db.Cars.findAll({})
