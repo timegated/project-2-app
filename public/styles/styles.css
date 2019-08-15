@@ -11,16 +11,24 @@ body, html {
   background-size: cover;
 }
 
-h6 {
+h1 {
   font-family: 'Faster One', cursive;
   color: #D6BA73;
   text-align: center;
-  font-size: 50px;
+  font-size: 145px;
+  margin: 0;
 }
 
 h2 {
   font-family: 'Roboto', sans-serif;
   text-align: center;
+}
+
+h6{
+  font-family: 'Faster One', cursive;
+  color: #D6BA73;
+  text-align: center;
+  font-size: 50px;
 }
 
 .brand-logo {
@@ -38,4 +46,14 @@ h2 {
   color: #D6BA73;
 }
 
+.centered {
+  padding-top: 115px;
+}
 
+.login{
+  padding-top: 10px;
+}
+
+.signup{
+  padding-top: 5px;
+}
