@@ -1,14 +1,15 @@
 {{> nav/nav-block}}
-<div class="row">
+
  <h6>Inventory</h6>
   {{#each cars}}
+  <div class="row">
   <div class="col s3 m4">
     <div class="card">
       <div class="card-image waves-effect waves-block waves-light">
         <img style="height:350px;width:400px" class="activator" src="{{image}}">
           <span style="background:black;" class="card-title activator blue-text">{{make}} {{model}}<i class="material-icons right">add</i></span>
-          <button id="delete" data-id="{{this.id}}" class="btn btn-floating right"><i class="material-icons blue">delete</i></button>
-          <button id="update" data-id="{{this.id}}" data-status="{{status}}" class="btn btn-floating right"><i class="material-icons blue">arrow_upward</i></button>
+          <button data-id="{{this.id}}" class="btn btn-floating right delete"><i class="material-icons blue">delete</i></button>
+          <button data-id="{{this.id}}" data-status="{{status}}" class="btn btn-floating right update"><i class="material-icons blue">arrow_upward</i></button>
       </div>
       <div class="card-reveal">
         <span class="card-title black-text">{{make}} {{model}}<i class="material-icons right">close</i></span>
@@ -20,9 +21,9 @@
        
       </div>
     </div>
- </div>
+</div>
  {{/each}}
-
+ 
 
 
 

@@ -35,39 +35,36 @@ $(document).ready(() => {
         url: '/signup'
     })
     .then(data => {
-        console.log(data)
+    console.log(data)
     })
-   })
-   //Updating status of cars from false (not ready) to true (ready to sell) on Vehicles page
-   $('#update').on('click', (e) => {
-    // console.log('update was clicked.')
-        let id = e.currentTarget.getAttribute('data-id')
-        let status = e.currentTarget.getAttribute('data-status')
-        console.log(id)
-        console.log(status)
-       $.ajax({
-           method: 'PUT',
-           url: '/models/' + id
-       }).then(data => {
-           
-           console.log(data)
-       })
-
-   })
-    //Delete method for vehicles page
-    $('#delete').on('click', (e) => {
-
-        let id  = e.currentTarget.getAttribute('data-id')
-        console.log(id)
-        $.ajax({
-            method:'DELETE',
-            url:'/models/' + id
-        }).then((data) => {
-            // console.log(data)
-            location.reload()
-        }).catch((err) => {
-            console.log(err)
-        })
+  })
+  // Updating status of cars from false (not ready) to true (ready to sell) on Vehicles page
+$('.update').on('click', (e) => {
+    const car = {
+      id: e.currentTarget.getAttribute('data-id'),
+      status: true
+    }
+    console.log(car)
+    console.log(e.currentTarget)
+    $.ajax({
+      method: 'PUT',
+      url: '/models/' + car.id,
+    }).then(data => {
+      console.log(data)
     })
+  })
+  //  Delete method for vehicles page
+$('.delete').on('click', (e) => {
+    const id = e.currentTarget.getAttribute('data-id')
+    console.log(id)
+    $.ajax({
+      method: 'DELETE',
+      url: '/models/' + id
+    }).then((data) => {
+    // console.log(data)
+      location.reload()
+    }).catch((err) => {
+      console.log(err)
+    })
+  })
 })
-
