@@ -19,8 +19,7 @@ module.exports = (app) => {
   // Delete vehicles from inventory
   app.put('/models/:id', (req, res) => {
     db.Cars.update({
-      id:req.body.id,
-      status: req.body.status
+      status: true
     }, {
       where: req.body.id
     }).then(data => {

@@ -12,7 +12,7 @@ $(document).ready(() => {
             mileage: $('#mileage').val(),
             description: $('#description').val()
         }
-        $.ajax({
+      $.ajax({
             method: 'POST',
             data: vehicleInfo,
             url: '/api/cars'
@@ -49,6 +49,7 @@ $('.update').on('click', (e) => {
     $.ajax({
       method: 'PUT',
       url: '/models/' + car.id,
+      data: car
     }).then(data => {
       console.log(data)
     })
