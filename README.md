@@ -1,6 +1,6 @@
 # project-2-app
 
-# VROOM 
+# ZOOM 
 (Car Inventory App)
 
 # Description:
@@ -18,4 +18,4 @@ The app will allow shops to not only stay organized, but it gives them a system 
 
 # Future Development
 
-With VROOM the user will be able to sort the cars by make/ model/ year, status (WIP) (R2S) or alphabetical order. It will display on an individual page with the image of the actual vehicle and provide information on what was repaired, VIN and other important car information. There's nothing we would take away, we would just build on and add to the app to make improvements.
+The future development would be to add user authentication so each user can access their own private account and create and view their inventory. With ZOOM the user will be able to sort the cars by make/ model/ year, status (WIP) (R2S) or alphabetical order. It will display on an individual page with the image of the actual vehicle and provide information on what was repaired, VIN and other important car information. There's nothing we would take away, we would just build on and add to the app to make improvements
