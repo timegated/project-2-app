@@ -1,49 +1,55 @@
 const db = require('../models')
-//Need dummy data.
-//create and read methods working
-//Need delete and update.
+// Need dummy data.
+// create and read methods working
+// Need delete and update.
 
 module.exports = (app) => {
 
-    //Home page - Currently for adding cars
+  // Home page - Currently for adding cars
   app.get('/', (req, res) => {
-<<<<<<< HEAD
-   
-      res.render('index')
-   
-    })
-=======
-      res.render('landing')
 
-  });
+    res.render('landing')
+  })
+
+   
+
   app.get('/addcar', (req, res) => {
-      res.render('addcar')
-    });
-    //Delete vehicles from inventory
-  app.delete('/models/:id', (req, res) => {
-      db.Cars.destroy({
-        where: {
-          id: req.params.id
-        }
-    });
-      console.log(req.id)
-    });
-    //Displaying all cars added to the database
->>>>>>> c810dafa0318f78499cf8f0e72b98be473a4e18b
-    app.get('/models', (req, res) => {
-      db.Cars.findAll({})
-      .then(data => {
-      let carObject = {cars:data}
-      console.log(carObject)
-      res.render('models', carObject)
+    res.render('addcar')
+  });
+  // Delete vehicles from inventory
+  app.put('/models/:id', (req, res) => {
+    db.Cars.update({
+      id:req.body.id,
+      status: req.body.status
+    }, {
+      where: req.body.id
+    }).then(data => {
+      console.log(data)
     })
-      .catch(err => {
-      console.log(err)
-      });
+  })
+  app.delete('/models/:id', (req, res) => {
+
+    db.Cars.destroy({
+      where: {
+        id: req.params.id
+      }
+
     });
-    //Form for adding new cars to database
-    app.post('/api/cars', (req, res) => {
-      db.Cars.create({
+  // Displaying all cars added to the database
+  app.get('/models', (req, res) => {
+    db.Cars.findAll({})
+      .then(data => {
+        const carObject = { cars: data }
+        console.log(carObject)
+        res.render('models', carObject)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  })
+  // Form for adding new cars to database
+  app.post('/api/cars', (req, res) => {
+    db.Cars.create({
       make: req.body.make,
       model: req.body.model,
       year: req.body.year,
@@ -54,9 +60,7 @@ module.exports = (app) => {
       status: false
     }).then(data => {
       // console.log(data)
-    });
+    })
     // console.log(req.body)
-  });
-
-  
+  })
 }
