@@ -35,8 +35,10 @@ module.exports = (app) => {
       }
 
     });
+  });
   // Displaying all cars added to the database
   app.get('/models', (req, res) => {
+    console.log("get models");
     db.Cars.findAll({})
       .then(data => {
         const carObject = { cars: data }
@@ -63,5 +65,5 @@ module.exports = (app) => {
     })
     // console.log(req.body)
   })
-})
+
 }
