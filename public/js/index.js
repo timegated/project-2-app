@@ -35,9 +35,27 @@ $('#createCar').on('click', () => {
       url: '/signup'
     })
       .then(data => {
-        console.log(data)
+        // console.log(data)
       })
 })
+  $('#login').on('click', () => {
+    const user = {
+      username: $('#username').val(),
+      password: $('#password').val()
+    }
+    $.ajax({
+      url: '/login',
+      method: 'POST',
+      data: user
+     
+    })
+      .then(data => {
+        if(data) {
+           console.log(window.location.href)
+        }
+      
+      })
+  })
   // Updating status of cars from false (not ready) to true (ready to sell) on Vehicles page
 $('.update').on('click', (e) => {
     const car = {
