@@ -23,7 +23,7 @@
     "nhtsa": "^1.2.7",
     "node-craigslist": "^2.1.0",
     "nodemon": "^1.19.1",
-    "sequelize": "^5.8.6",
+    "sequelize": "^5.15.1",
     "vin-generator": "^1.0.1"
   },
   "devDependencies": {
