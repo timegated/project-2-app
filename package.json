@@ -17,7 +17,7 @@
     "cookie-parser": "^1.4.4",
     "craigslist-searcher": "^1.0.4",
     "dotenv": "^8.0.0",
-    "express": "^4.17.0",
+    "express": "^4.17.3",
     "express-handlebars": "^3.1.0",
     "mysql2": "^1.6.5",
     "nhtsa": "^1.2.7",
